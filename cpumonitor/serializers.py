@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import CpuUsage
+
 """
 Use ModelSerializer to convert any model to serialized JSON object
 """

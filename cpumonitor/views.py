@@ -1,3 +1,4 @@
+import datetime
 from typing import List
 from .models import CpuUsage
 from rest_framework import generics
@@ -47,3 +48,20 @@ class CpuUsageTimeRangeList(generics.ListAPIView):
         end = self.kwargs.get(self.end)      
         range_usages = CpuUsage.objects.filter(server_id=serverid,created__gte=start,created__lte=end)
         return range_usages  
+
+"""
+Get CPU range with server_id the late 
+"""
+class CpuUsageRealTimeList(generics.ListAPIView):
+    lookup_field = "server_id"
+    start = "start"
+    end = "end"
+    serializer_class = CpuUsageSerializer
+
+    def get_queryset(self):
+        serverid = self.kwargs.get(self.lookup_field)
+        start = datetime.datetime.now() - datetime.timedelta(minutes = 5)
+        end = datetime.datetime.now()     
+        range_usages = CpuUsage.objects.filter(server_id=serverid,created__gte=start,created__lte=end)
+        return range_usages  
+
