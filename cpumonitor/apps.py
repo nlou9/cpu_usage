@@ -10,7 +10,7 @@ class CpumonitorConfig(AppConfig):
         print("start poll CPU status in every 10s")
         from .task import Task      
         scheduler = BackgroundScheduler()
-        scheduler.add_job(Task(1).update_database,'interval',seconds=3)
+        scheduler.add_job(Task(1).update_database,'interval',hours=3)
         scheduler.start()
         
  
