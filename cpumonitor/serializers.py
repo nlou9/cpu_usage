@@ -9,13 +9,13 @@ class CpuUsageSerializer(serializers.HyperlinkedModelSerializer):
         model = CpuUsage
         fields = [
             "server_id",
-            "sys_usage",
-            "user_usage",
-            "idle", 
-            "created"
+            "sys_usage_percentage",
+            "user_usage_percentage",
+            "idle_usage_percentage", 
+            "timestamp"
         ]
         extra_kwargs= {
-            "created": {"required":False},
+            "timestamp": {"required":False},
         }
 
 

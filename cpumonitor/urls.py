@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 """
-REST API
+Router to redirect to views
 """
 
 urlpatterns = [

@@ -1,7 +1,5 @@
 import './App.css';
 import React, { useRef, useState, useEffect } from "react";
-// import Highcharts, { setOptions } from 'highcharts';
-// import HighchartsReact from 'highcharts-react-official';
 import { Line } from "react-chartjs-2"
 
 const options = {
@@ -16,7 +14,6 @@ const options = {
     }
   }
 }
-
 
 function App() {
   const [chartData, setChartData] = useState({});
@@ -34,11 +31,9 @@ function App() {
       console.log(data);
       if (data) {
         for (const dataObj of data){
-          timeList.push(dataObj.created)
-          usage.push(dataObj.sys_usage + dataObj.user_usage)      
+          timeList.push(dataObj.timestamp)
+          usage.push(dataObj.sys_usage_percentage + dataObj.user_usage_percentage)      
         } 
-      console.log(timeList.slice(0,10))
-      console.log(usage.slice(0,10)) 
 
       setChartData({
         labels: timeList,
@@ -50,8 +45,6 @@ function App() {
           tension: 0.1
         }]
       });
-      console.log("chartdata...")
-      console.log(chartData);
       }else{
         console.error("Response body is empty");
       }
@@ -69,7 +62,7 @@ function App() {
   if (chartData.datasets){
     return(
       <div className="App">
-          <h1>Server Real Time CPU Usage Monitor</h1>  
+          <h1>Local Server CPU RT Usage Monitor</h1>  
             <Line data={chartData} options={options} />  
       </div>
     )   
