@@ -12,7 +12,7 @@ class CpumonitorConfig(AppConfig):
     name = 'cpumonitor'
     
     def ready(self): 
-        print("start poll CPU status in every 10s")
+        print("start poll CPU status in every 15s")
         from .task import Task   
         try:   
             scheduler = BackgroundScheduler(timezone='UTC')
