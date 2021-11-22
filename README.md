@@ -17,7 +17,7 @@ https://drive.google.com/file/d/1dhxJI0eXxQNsRG8YAoy3lyBMvQ4139QV/view?usp=shari
 git clone project and go to the project root dir
 
 1. Run web server
-   requirement: python3
+   requirement: python3, Linux
    - create a virtual env and activate it 
    - pip install -r requirements.txt
    - run web server: 
