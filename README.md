@@ -21,11 +21,11 @@ git clone project and go to the project root dir
    - create a virtual env and activate it 
    - pip install -r requirements.txt
    - run web server: 
-     python manage.py makemigrations
-     python manage.py migrate
-     python manage.py createsuperuser
-     python manage.py runserver 
-     server would run by default on http://127.0.0.1:8000/
+     python manage.py makemigrations  
+     python manage.py migrate  
+     python manage.py createsuperuser  
+     python manage.py runserver   
+     server would run by default on http://127.0.0.1:8000/  
      
 2. REST API Usage:  
    REQUEST: 
