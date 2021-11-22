@@ -10,6 +10,9 @@ React, Django REST framework
 ## License 
 MIT
 
+## Demo
+https://drive.google.com/file/d/1dhxJI0eXxQNsRG8YAoy3lyBMvQ4139QV/view?usp=sharing
+
 ## Run the project locally
 git clone project and go to the project root dir
 
@@ -56,7 +59,7 @@ git clone project and go to the project root dir
   <img width="1251" alt="1" src="https://user-images.githubusercontent.com/39046184/142806909-6f7137b1-999a-4db9-8752-7291b0c054c9.png">
 
 ## Extend in the future
-Migrage to Mongodb. Mongbo is a better candidate in this scenario considering data structure and scalability. Django has libraby "Django" which is consistent with Django ORM. 
+Migrage to Mongodb. Mongbo is a better candidate in this scenario considering data structure and scalability. Django has libraby "Django" which is consistent with Django ORM. For this project, because by default django use SQLite and it is not necessary to preinstall and setup, it would be easier to run this project locally here. 
 
  
 
