@@ -45,4 +45,20 @@ git clone project and go to the project root dir
  python manage.py test
  
  ## Screenshots
+ ### RESTAPI
+ #### get data with server_id
+ <img width="1251" alt="3" src="https://user-images.githubusercontent.com/39046184/142806448-af7d2178-b9f7-4842-bb3e-427b4b327e70.png">
+ 
+ #### get data with server_id and timestamp range
+ <img width="1251" alt="2" src="https://user-images.githubusercontent.com/39046184/142806626-5f50d271-5990-4022-b2fc-4a41f2bb3004.png">
+ 
+ #### client 
+  <img width="1251" alt="1" src="https://user-images.githubusercontent.com/39046184/142806909-6f7137b1-999a-4db9-8752-7291b0c054c9.png">
+
+## Extend in the future
+Migrage to Mongodb. Mongbo is a better candidate in this scenario considering data structure and scalability. Django has libraby "Django" which is consistent with Django ORM. 
+
+ 
+
+
    
