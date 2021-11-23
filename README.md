@@ -27,13 +27,20 @@ git clone project and go to the project root dir
      python manage.py runserver   
      server would run by default on http://127.0.0.1:8000/  
      
-2. REST API Usage:  
+2. REST API Usage:    
+
+   ASSUMPTION:   
+   
+   Currently the requirement is to show the hosting server cpu usage, in the design, the hosting server_id is 1 by default.   
+   
    REQUEST: 
-   - get cpu usage data by server id    
-     http://127.0.0.1:8000/cpu/<server_id>      
-     e.g. http://127.0.0.1:8000/cpu/1   
-   - get cpu usage data by server id and timestamp range   
-     http://127.0.0.1:8000/cpu/<server_id>/<start_timestamp>/<end_timestamp>   
+   
+   - **get cpu usage data by server id**   
+     http://127.0.0.1:8000/cpu/**<server_id>**      
+     e.g. http://127.0.0.1:8000/cpu/1
+     
+   - **get cpu usage data by server id and timestamp range**   
+     http://127.0.0.1:8000/cpu/**<server_id>/<start_timestamp>/<end_timestamp>**   
      e.g. http://127.0.0.1:8000/cpu/1/2021-11-22T00:10:46.771147Z/2021-11-22T00:11:46.826599Z  
   
 3. Run web client:
