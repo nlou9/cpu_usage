@@ -18,9 +18,9 @@ class CpumonitorConfig(AppConfig):
             scheduler = BackgroundScheduler(timezone='UTC')
             scheduler.add_job(Task(1).update_database,'interval',seconds=15)
             scheduler.start()
-        except Exception as e:
-            logger.error(e)
-            pass
+        except (KeyboardInterrupt, SystemExit):
+            scheduler.shutdown()
+            logger.info("Shutdown scheduler!")
 
         
  
